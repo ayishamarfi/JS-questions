@@ -1,15 +1,12 @@
-//            *
-//           * *
-//          * * *
-//         * * * *
-for(i=1;i<=4;i++){
-    str=""
-    for(space=3;space>=i;space--){
-        str=str+" "
+for(row = row<=5;row++){
+    str =""
+    for(spa = 1;spa<=5-row;spa++){
+        str = str+"  "
+
+
     }
-    for(j=1;j<=i;j++)
-    {
-        str=str+"* "
+    for(col=1;col<=2*row-1;col++){
+        str=str+variable++
     }
     console.log(str);
     
