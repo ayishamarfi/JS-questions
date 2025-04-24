@@ -1,0 +1,585 @@
+---------------------MODULE 2------------------------------
+---------------------JAVASCRIPT----------------------------
+Features of js:-
+---------------
+     - programming language(Scripting language)
+     - used to provide behaviour to a web application
+     - it is used in both frontend as well as backend
+       - initialyy js was introduced as frontend language
+       - v8 engine is to run js in browser
+       - forntend-behavioural
+       - backend-logical operations
+       - nodejs environment-has v8 engine to run the js outside the browser
+     - it is categorized as dynamically typed language
+       - dynamically typed language-datatype changes according to the assigned value
+       - statically typed language-typeScript
+     - single thread programming language-line by line execution
+     - it suppot both procedural(react) and object oriented (oops)
+     (angular
+     )paradigm(style of programming)
+----------------------Procedural programming-----------------------
+-programming paradigm where series of computational steps are carried out .unlike oops procedural programming consider both data and methods as two diff entities. 
+- js file - filename.js
+
+display
+-------
+
+console.log(content)
+cntrl j -to open terminal in vs code
+            
+ to run a file
+ -------------
+
+ node filename.js
+
+ datatypes
+ ---------
+ -Two types:-
+
+   1)primitive datatype
+     - base type
+     - immutable -can't change the original value ,but can reassign the value.
+     - 1)String -sequence of characters
+               -eg: 'text' , "text"
+       2)number -represents integer and floating point numbers
+             -eg: 25 , 25.0
+       3)bigInt -it represent larger number outside the boundary of number category
+              -eg:2^53
+       4)null -intentional absence of value
+             -eg:let x = null 
+       5)undefined -not assigned a value     
+             -eg: let x
+       6)boolean -logical value( true or false)
+       7)symbol -used to uniquely identify a content
+                -used to creating libraries
+                -let variable = symbol('content')
+
+   2)non primitive datatype 
+     - derived datatype
+     - mutable-can change and reassign values 
+     -8)object - data is stored in key:value pairs
+        - eg: array , object , functions etc.........   
+        - it is combination of primitive datatype.
+
+
+variable
+----------
+ 
+ - used to store data
+ - identifiers - rules to create variables
+         - variable name can have alphabets , numbers , underscore , etc
+        - variable name should not start with digit but subsequent characters can be digits
+        -  if the variable name contains more than one word , the words shouldn't have space
+        - camelcase - variableName
+        - snakecase - variable_name
+    - variable names are case sensitive
+          car CAR Car caR - all these are considered as separate variables
+ syntax
+ --------
+  variable_name = value
+  keyword variable_name = value
+
+  keyword
+  -------
+   - set of reserved words
+   - it gives special meaning to the variables
+   1)var - new value can be reassigned , redeclaration allowed , hoisting possible , global scope
+   2)const - reassigning is not possible , redeclaration not allowed , hoisting not possible , global scope
+   3)let - reassigning possible , redeclaration not allowed , block{} level scope , hoisting not possible
+
+   Hoisting
+   --------
+    - using a variable before it is declared
+
+    Template literals
+    -----------------
+        - way of displaying content.
+        syntax
+        console.log(`content ${variable}`)
+
+   concatenation
+   --------------
+      -add up of data 
+      -string + string =string
+      - string + number = string
+      -number + number = number
+
+    operators
+   ----------         
+        1)Assignment (=)
+        2)Arithmetic
+          + - / * %(remainder) **(exponential)
+        3)Relational operations
+           < , > , <= , >= , [== , ===](comparison)
+           -Returns boolean values
+           - == compare only values
+           - === compare value and datatype
+        4)Logiical operators
+           - between one or more ralational operators
+             -return boolean value
+            1)AND (&&) 
+
+               T && T = T
+               T && F = F
+               F && T = F
+               F && F = F
+
+            2)OR (||)
+
+               T && T = T
+               T && F = T
+               F && T = T
+               F && F = F
+
+            3)NOT (!)
+                 !F = T
+                 !T = F
+5)increment(++) or decrement(--) operators                
+            
+            x ++                x--
+
+            x = x+1             x = x-1
+   -the position of the operation is important
+   ++x inside console will gives one added  value while
+   x++ will gives the value of x itself
+
+6)shorthand operators  
+     x = x+1  =x+=1(same variable in both lhs and rhs)
+7)ternary operators
+syntax:
+    -condition?true statements : false statement
+    -condition?statement : condition?statement :..........
+8)truthy operator(used if only one condition)
+    -condition && true statement   
+9)spread operator
+10)rest operator
+    
+conditional statements / decision making statements
+------------------------------------------------------
+   -execute based on the condition 
+1)if else statements
+
+     if(condition){
+      statements
+     }
+     else if(condition) {
+      statement
+     }
+     else{
+      statements
+     }
+
+     -only one state execute at a time.
+
+     -------------------looping statements-------------
+     -cntrl c -forcefull stopping of run
+     - used to execute a set of code repeatedly at a  particular part of a program file.
+     - to exit a loop, the condition must be false.
+     1)while
+      -don't know number of iteration
+           syntax:
+                variable initialization
+                while(condition){
+                  statements
+
+
+                  exit condition/increment or decrement statements
+                }
+      
+     2)for
+     -knows number of iteration
+       for(variable initialization ; condition ;exit condition){
+        statement
+       }
+- break -forcefully exit a parent loop
+3)nested loop -pattern printing
+ -loop within a loop
+
+ Function
+ ---------
+ -Used to do tasks repeatedly at different position of a programming file
+ - to reduce boiler plates(repeated statements)
+ -2 parts 
+ 1)function definition 
+ 2)fuction call
+
+ syntax
+ ------
+
+ fumction fname(){
+  statement
+ }
+
+ fname(arg/para/empty)[function call]
+
+ -function call is mandatory inorder to execute a task
+ -data coming from outside must be passed as arg/parameter
+    -arguments are actual values
+    -parameters are variables
+ -variables inside a function is having functional scope -can't access directly outside the function 
+ -inorder to access variable ouside the fn -return the variable
+ -any code after return statement willnot execute
+  
+Arrow function(ES6)
+--------------
+
+ syntax
+ ------
+  const variable_name = (arguments/parameters)=> statement or {statements}
+  variable_name()  
+
+ advantage
+ ---------
+ -syntax is less compared to regular function
+ -if arrow fn is having single statement then automatic return
+ -better performance
+
+ functional hoisting
+ -------------------
+ -calling a fn bfore it is defined.
+ -possible for normal fn.arrow fn doesnt support hoisting
+
+ types of functions
+ -----------------
+
+ 1)predefined fns
+ -----------------
+ -these are builtin fns for js.
+ -no need to define the fn.
+ eg:console.log() , math.floor() , math.parseInt() , eval() , string() , number() , typeOf()  etc....
+
+ 2)callback fns(fq4)
+ --------------
+ -fns that are passed as an argument to another fn and executed later by the parent fn.
+
+ 3)Nested fn(fq5)
+ -----------
+ -fns defining inside another fn
+ -closure property-variables inside the parent fn can be accessed inside the child funtion but child variable can't access in the parent fn.
+
+ 4)synchronous fn
+ ----------------
+ -functions wihtout any time delay
+
+ 5)asynchronous fn(fq6)
+ ------------------
+ -functions with time delay in execution
+ eg: setTimeout , API
+
+ Datastructures
+ ---------------
+ -a specialized format for organizing,processing,retrieving, and storing data
+ eg: linkedlist ,array,tree,stack,queue,graph etc .......
+
+ -Array
+ ------
+ -Unlike variables arrays can hold more than one data
+ -definition:array is a single variable that can store more than one data of different datatpes that are separated by commas and enclosed within square bracket.
+
+ syntax
+ ------
+ arrayname = [data1,data2,data3,......]
+ -each item in the array is given an index  value starts with 0 - (length-1)
+ -number of items - length (total of location) 
+ -stored as an object
+ {
+  key:value = index:data
+ }
+ ways to access each items from an array
+ ---------------------------------------
+ 1)normal for loop-used to return items from a specific index .
+ 2)for in-directly return indexes of the array
+ 3)for of- return directly the item
+
+ Array operations
+ ----------------
+ 1)push() - to add item to end of an array 
+ 2)unshift() - to add item to start of an array
+ 3)pop() - remove last item from the array
+ 4)shift() - to remove the first item from the array
+ 5)sort() - to arrange the array in ascending or descending order(fq14)
+ -------------------APRIL 9----------------------
+ 6)forEach()-to access each item from an array-for loops(fq20)
+     syntax:
+          array.forEach((variable)=>statement)
+ 7)map()-to access each item from an array 
+         -it returns a new array of the same number of items in parent array  (FQ20)    
+
+      syntax:
+
+         newArray = parentArray.map((variable)=>statement)
+
+ 8)reduce() -iterate through the array and return a single value from the array  
+  eg: lowest,highest,sum,etc....
+
+   syntax:
+
+       value = array.reduce((previousValue, currentValue)=>statement)   
+
+ 9)filter - return a new array having elements satisfying a specific condition 
+
+      syntax:
+
+          newArray = parentArray.filter((variableName)=>condition)   
+
+  10)some() - it returns boolean value based on the condition         
+  11)find() - returns first element satisfying the condition.
+            syntax:
+
+             value = parentArray.find(variable_name=>condition)
+
+  12)flat(depth)-used to change the dimension of an array
+                -depth refers how deep a nested array need to be flattened.
+                -without passing depth,it will change to the dimension just below the current dimension.(if 4d then changes to 3d)
+                -infinity-changes directly to 1d
+
+  13)includes()-To check whether a given item is present in the array or not.              
+          syntax:
+            array.includes('item')
+
+  14)splice()-To add or remove items at different postions in an array   
+            syntax:
+            array.splice(stratindex , count_of_remove ,items_to_added)
+
+  15)indexOf()-to get index of an element   
+  16)lastIndexOf()-to get the last index of the element
+  17)slice()-it gives a sub array from aparent array     
+            -ending index will be excluded           
+            syntax:
+                 array.slice(startIndex , endIndex)
+  18)reduceRight()-iteration starts at last element of an array               
+
+---------------MONDAY APRIL 7-----------------
+
+ 1)linear search
+ 
+ 2) binary search- time cunsumption br reducing the number of    iteration
+        -prerequisite- the given array is should be in ascending order.
+
+     
+    Algorithm
+   ----------
+   -it is the step by step procedure/instruction to solve a question.
+     -algorithm should be written in between start and end
+      
+
+   Flow characters
+   ---------------
+   -pictorial representation of an algorithm   
+
+
+
+
+
+   Nested array : array within an array
+
+   string
+   ------
+   -sequence of characters
+
+   methods
+   -------
+   1)startsWith()-checks whether a string starts with a  specific character.
+            -case sensitive
+            -returns aboolean value
+   2)endsWith()-checks whether a string ends with a particular sequence
+             -case sensitive
+            -returns aboolean value
+   3)toUpperCase()-to convert a string into capital letters   
+   4)toUpperCase()-to convert a string into small letters   
+   5)substring()-to create a sub sring from a given string
+
+        string.substring(start, end)
+        -ending index will be excluded.so only startin index is provided.
+   6)slice(start ,end) - to get a small portion of a string     
+       -ending index will be excluded
+       accepts negative values as well(negative index starts from -1) 
+   7)trim()-to remove space in a given string from leading (start)and tailing(end)   
+   8)replace()-To replace the first matching searchItem in a string
+
+            string.replace(searchValue , endValue)
+   9)replaceAll()-removes all matching searchItem   
+   10)Array.from()-to get all characters of a string as array
+   11)split(separator)-divide the string based on aseparator and returns an array      
+
+  naming convention
+  -----------------
+  1)camel case = myVariableName
+  2) pascal case = myVariableName 
+  3)camel case = my_variable_name
+  4) pascal case = my-variable-name 
+  5) screaming snake case =  MY_VARIABLE_NAME    
+
+
+  -----> array is mutable and string is immutable       
+                  
+    object(fq25) 
+            
+    ------
+  Unlike array, it can store more than one data of different datatypes with more clarity.
+  definition: object is a single variable that can store more than one data of different datatypes as key:value pair that are separated by commas and enclosed within curly brackets.             
+   syntax:
+   objectname ={
+    key1:value1,
+    key2:value2,......
+   }
+           
+   -to access a single data ,
+       -objectname['key']-can be used for 'exact key' or variable key
+       -objectName.key (dot operator)   -only if there is exact key     
+
+           
+
+-for in is used to access of keys in an object
+
+add data
+--------
+
+objectname['key'] = value
+object.assign(target,{key:value})
+
+update data
+-----------
+
+objectname[key] = value
+
+delete data
+----------
+
+delete objectname.key
+
+OBJECT ORIENTED PROGRAMMING SYSTEM -oops
+-----------------------------------------
+
+-it is a modern programming paradigm(style) which consider real time entities into class and objects.
+ 
+ Basics
+ ------
+ 1) class -blueprint which contains common features from which different objects are created
+ 2)object - real time entity created from the class
+ 3)reference- actual memory location where properties and  methods are stored.
+
+
+-property - it is the variable inside a class.
+-method - functions inside a class
+-instance variable- used to access the properties inside the class  
+
+  syntax for class
+  ----------------
+
+  class Classname {
+    //properties
+    //constructors
+    //method
+  }
+
+  -constructors are used for initializing the property.it is a predefined method.contructors invokes first when an instance for a class is created.
+  -not mandatory to place all the above components inside the class always.
+
+  syntax for object
+  ----------------
+
+  const objectname = new classname()
+
+syntax of constructors
+----------------------
+constructors(){
+   
+}
+
+pillers of oops
+---------------
+1)inheritance - classical inheritance
+2)poymorphism
+3)encapsulation
+4)abstraction
+
+inheritance (eg : oops4.js)
+-----------
+
+- used to access methods and properties from one class to another.
+- parent class - the class from which data is taken
+               - also called super class/base class.
+- child class - the class  which access the data
+              -also called derived class/ subclass
+-keyword used to inherit data is extends   
+
+Types of classical inheritance
+-----------------------------
+
+1)single inheritance(oops4) -directly support in js
+2)multi-level inheritance(oops5)-directly support in js
+3)heirarchial inheritance(oops6)-directly support in js
+
+4)multiple inheritance- partially support in js
+5)hybrid inheritance- partially support in js
+
+polymorphism
+-------------
+-real time eg:payment gateways
+poly - many 
+morphism - forms
+
+1)Method overloading
+2)method overriding
+
+   Method overloading
+   ------------------
+   -Method with same name but different arguments.
+   -execute based on number of argument
+   -js not support method overloading directly.(oops7.js)
+   -rest operator (...)- it make the arguments into an array
+
+   method overriding
+   -----------------
+   -methods with same name and same number of arguments
+   -execute the last written method.
+   -js supports method overriding.
+   -used to add special features to subclass in inheritance
+
+Encapsulation
+-------------
+ -Binding od data and functions to be performed on that data into a single unit(class)
+ 
+abstraction
+-----------
+the process of hiding the internal details of an application from the outer world.
+
+Exception handling
+------------------
+Exception - run time error
+
+ -try-catch block
+
+syntax
+------
+
+try{
+  statement
+}
+catch{
+  statement  -execute only when there is error in try block
+}
+finally{
+  statement -execute in both case
+}
+
+-----------------------------------------------------------
+
+JS IN frontend
+--------------
+
+-Run by browser
+-Browser - it is an application program that provides an interface to interact with all the informations or resources available in internet or www.
+-html,css,xml,js are languages which can run by browser.
+-js provides behaviour to the web page.
+-js access the dom structure to provide the behaviour
+
+DOM -document object model
+--------------------------
+
+-tree structure of html document.
+-it is created by browser.
+
+
+

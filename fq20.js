@@ -1,49 +1,24 @@
-//w a p to print all the items from the given array
-a=[1 , 2, 3, 4]
-for(let num of a){
-    console.log(num);
-    
-}
-console.log('--------------------');
+ str = 'Luminar' //l(-8)u(-7)m(-6)i(-4)n(-3)a(-2)r(-1) - negative values
+str3 = str.slice(-7)
+console.log(str3);
 
-a.forEach((num)=>console.log(num));
+  // str4=str.slice(-5,-2)
+//   console.log(str4);
+//     //to print min().ending index will be excluded so -2 is given as ending index 
+//   text = '       hel    lo         '  
+//   console.log(text.trim());
+  
+// sent = 'I Work in Microsoft , but the office of Microsoft is far away'
+// console.log(sent.replace('Microsoft','Google'));
+// //------------------
+// console.log(sent.replaceAll('Microsoft','Google'));
+// //---------------------------
+// s=Array.from(str)
 
-console.log('--------------------');
+// console.log(s);
+// //--------------------------
+// str2='LUMINAR TECHNOLAB'
+// str4=str2.split(' ')
+// console.log(str4);
 
-//w a p to find square of all the elements in a given array
-
-a.forEach((num)=>console.log(num**2));
-
-console.log('--------------------');
-
-sq = a.map((num)=>(num**2))
-console.log(sq);
-
-console.log('--------------------');
-
-// w a p to create a new array with number <= 3 then increment by 1 else decrement by 1
-
-newArray = a.map((num)=>num<=3?num+1:num-1)
-console.log(newArray);
-
-console.log('--------------------');
-
-highest = a.reduce((num1,num2)=>num1>num2?num1:num2)//in the first loop num1 and num2 will be 1,bcz there is no previous value
-console.log(highest);
-
- lowest = a.reduce((num1,num2)=>num1<num2?num1:num2)
-console.log( lowest);
-
-sum =  a.reduce((num1,num2)=>num1+num2)
-console.log(sum);
-
-
-
-
-
-
-
-
-
-    
 
